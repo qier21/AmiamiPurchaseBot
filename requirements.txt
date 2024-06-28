@@ -1,0 +1,14 @@
+brotlipy
+certifi
+cffi
+cryptography
+idna
+numpy
+pycparser
+pygame
+pyOpenSSL
+PySocks
+selenium
+urllib3
+win-inet-pton
+wincertstore

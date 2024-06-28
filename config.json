@@ -1,0 +1,9 @@
+{
+  "credentials": {
+    "email": "xxxx@xxxx.com",
+    "password": "xxxxx"
+  },
+  "driverPath": "C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe", 
+  "chromeUserData": "C:/chromedriver-win64/userdata/Default", 
+  "itemLink": "https://www.amiami.com/eng/detail/?gcode=FIGURE-158596"
+}
