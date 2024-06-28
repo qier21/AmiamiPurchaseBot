@@ -41,11 +41,11 @@ please examine the source code yourself, make sure your account information will
 Run the bot by issuing the following command in your terminal:
 
 ```bash
-python ./main.py config.json
+python ./amiamiBot.py config.json
 ```
 or
 ```bash
-python ./main.py config.json debug
+python ./amiamiBot.py config.json debug
 ```
 if use debug mode, automative procedures will halt at the penultimate "Confirm your order" screen.
 
