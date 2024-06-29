@@ -28,11 +28,21 @@ def checkProduct(driver, productLink, credentials, debug):
             cart = list(filter(lambda element: element is not None and 
                 element.get_attribute("style") == "", elements))
 
+            for ele in elements:
+                print("style is ", ele.get_attribute("style"))
+
             # check cart button
             if cart:
                 print("cart button available")
             else:
                 print("cart button unavailable")
+                # some times, the button may be disabled for a brief period before it becomes available.
+                # It might be because you have a good network quality.
+                time.sleep(0.5)
+                cart = list(filter(lambda element: element is not None and 
+                    element.get_attribute("style") == "", elements))
+                if cart:
+                    print("cart button available after delay")
 
         except:
             print("out time, ",cart)
