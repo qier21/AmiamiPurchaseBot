@@ -28,11 +28,11 @@ def checkProduct(driver, productLink, credentials, debug):
             cart = list(filter(lambda element: element is not None and 
                 element.get_attribute("style") == "", elements))
 
-            # check cart botton
-            if elements:
-                print("cart botton available")
+            # check cart button
+            if cart:
+                print("cart button available")
             else:
-                print("cart botton unavailable")
+                print("cart button unavailable")
 
         except:
             print("out time, ",cart)
@@ -87,7 +87,7 @@ def checkProduct(driver, productLink, credentials, debug):
     WebDriverWait(driver, 60).until(
         EC.text_to_be_present_in_element((By.CLASS_NAME, 'section-title'), "Confirm your order"))
     confirm = driver.find_element(By.CLASS_NAME, "btn-submit")
-    print("find the subimt botton:", confirm.text)
+    print("find the subimt button:", confirm.text)
     if not debug:
         confirm.click() 
 
@@ -115,7 +115,8 @@ if __name__ == '__main__':
         driverPath = config["driverPath"]
         link = config["itemLink"]
         userData = config["chromeUserData"]
-        print("config: ",config)
+        print("item link: ",link)
+        # print("config: ",config)
 
         options = webdriver.ChromeOptions()
         options.add_argument("start-maximized")
